@@ -27,7 +27,7 @@ if(isset($_POST['submit']))
         // Генерируем случайное число и шифруем его
         $hash = md5(generateCode(10));
 
-        if(!empty($_POST['not_attach_ip']))
+        if(empty($_POST['not_attach_ip']))
         {
             // Если пользователя выбрал привязку к IP
             // Переводим IP в строку
